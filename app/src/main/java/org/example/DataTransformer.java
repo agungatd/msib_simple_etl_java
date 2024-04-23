@@ -1,7 +1,7 @@
 package org.example;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class DataTransformer {
     public static List<TransformedOrder> transformOrders(List<Order> orders) {
@@ -17,7 +17,7 @@ public class DataTransformer {
             double netAmount = totalAmount * vat;
 
             // unchanged fields
-            Date orderDate = order.getOrderDate();
+            LocalDate orderDate = order.getOrderDate();
             String status = order.getStatus();
             transformedOrders.add(new TransformedOrder(order.getId(), customerName, orderDate, vat, totalAmount, netAmount, status));
         }

@@ -1,10 +1,10 @@
 package org.example;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class TransformedOrder {
     private int id;
     private String customerName;
-    private Date orderDate;
+    private LocalDate orderDate;
     /**
      * new fields in transformedOrder
      * - vat: the rate of value added tax
@@ -15,7 +15,15 @@ public class TransformedOrder {
     private double netAmount;
     private String status; // e.g., "placed", "shipped", "delivered", "cancelled"
     
-    public TransformedOrder(int orderId, String customerName, Date orderDate, double vat, double totalAmount, double netAmount, String status) {
+    public TransformedOrder(
+        int orderId, 
+        String customerName, 
+        LocalDate orderDate, 
+        double vat, 
+        double totalAmount, 
+        double netAmount, 
+        String status
+    ) {
         this.id = orderId;
         this.customerName = customerName;
         this.orderDate = orderDate;
@@ -40,10 +48,10 @@ public class TransformedOrder {
         this.customerName = customerName;
     }
     
-    public Date getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
     }
     

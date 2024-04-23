@@ -1,14 +1,14 @@
 package org.example;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Order {
     private int id;
     private String customerName;
-    private Date orderDate;
+    private LocalDate orderDate;
     private double totalAmount;
     private String status; // e.g., "placed", "shipped", "delivered", "cancelled"
     
-    public Order(int orderId, String customerName, Date orderDate, double totalAmount, String status) {
+    public Order(int orderId, String customerName, LocalDate orderDate, double totalAmount, String status) {
         this.id = orderId;
         this.customerName = customerName;
         this.orderDate = orderDate;
@@ -31,10 +31,10 @@ public class Order {
         this.customerName = customerName;
     }
     
-    public Date getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
     }
     

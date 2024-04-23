@@ -1,6 +1,6 @@
 package org.example;
 import java.sql.Connection;
-import java.sql.Date;
+// import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.List;
@@ -24,7 +24,7 @@ public class DataLoader {
             for (TransformedOrder order: transformedOrders) {
                 stmt.setInt(1, order.getId());
                 stmt.setString(2, order.getCustomerName());
-                stmt.setDate(3, (Date) order.getOrderDate());
+                stmt.setObject(3, order.getOrderDate());
                 stmt.setDouble(4, order.getVat());
                 stmt.setDouble(5, order.getTotalAmount());
                 stmt.setDouble(6, order.getNetAmount());
