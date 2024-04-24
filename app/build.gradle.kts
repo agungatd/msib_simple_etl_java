@@ -26,6 +26,9 @@ dependencies {
 
     // Database drivers
     implementation("org.postgresql:postgresql:42.7.3")
+    // https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc
+    implementation("com.microsoft.sqlserver:mssql-jdbc:12.7.0.jre11-preview")
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
